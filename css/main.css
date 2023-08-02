@@ -1,0 +1,40 @@
+body {
+    text-align: center;
+    background-color: rgb(233, 164, 164);
+}
+
+
+table {
+    margin: 0 auto;
+    margin-top: 20px;
+    
+}
+
+table, td {
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.board td {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    transition: 0.5s;
+    padding: 10px;
+}
+
+.board td:hover {
+    background-color: rgb(191, 98, 62);
+}
+
+.timerDisplay{
+    margin-top: 10px;
+   
+
+}
+
+button {
+    background-color: rgb(186, 201, 196);
+    border-radius: 10px;
+}
+

@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>touch-nums</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+
+
+<body onload="initGame()">
+    <h2>Touch the numbers</h2>
+    <!-- <h3 class="next"></h3> -->
+    <div class="levels">
+        <h4>Choose your level:</h4>
+        <button onclick="setBoardSize(this)">Easy (16)</button>
+        <button onclick="setBoardSize(this)">Medium (25)</button>
+        <button onclick="setBoardSize(this)">Hard (36)</button>
+    </div>
+    <div class="timerDisplay">
+        ⏰: 00:00.000
+    </div>
+
+    <table class="board"></table>
+
+
+
+
+    <script src="js/touchnums.js"></script>
+</body>
+
+</html>
