@@ -14,6 +14,10 @@ function initGame() {
 }
 
 function setBoardSize(btn) {
+    if (gIntervalId) {
+        clearInterval(gIntervalId)
+        gIntervalId = 0
+    }
     var level = btn.innerText
     if (level === 'Hard (36)') gSize = 36
     else if (level === 'Medium (25)') gSize = 25
@@ -41,8 +45,9 @@ function renderBoard() {
     var strHTML = ''
     const rowSize = Math.sqrt(gSize)
     var numsCopy = gNums.slice()
+    strHTML += `<tbody>\n`
     for (var i = 0; i < rowSize; i++) {
-        strHTML += `<tbody>\n<tr>\n`
+        strHTML += `<tr>\n`
         for (var j = 0; j < rowSize; j++) {
             var num = numsCopy.pop()
             strHTML += `\t<td class= "cell" data-i="${i}" data-j="${j}" onclick="checkIfNext(this ,${i}, ${j})">${num}</td>\n`
